@@ -1,8 +1,16 @@
 # Contributing
 
+## Requirements
+- Python 3.11+ recommended
+- venv
+
 ## Setup
-- Requirements: (node/python/go/dotnet version)
-- Copy `.env.example` to `.env`
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+```
 
 ## Development
 - Install deps: `...`
