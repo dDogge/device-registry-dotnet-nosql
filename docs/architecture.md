@@ -1,16 +1,18 @@
 # Architecture
 
 ## Overview
-This service provides read models / aggregates for dashboards and analytics.
+Registry service stores device identity and metadata:
+- device id
+- model/hardware info
+- firmware version
+- status flags
 
-## Responsibilities
-- Receive events (later: from gateway/queue)
-- Store raw events (optional)
-- Compute aggregates (time windows, device summaries)
-- Expose query endpoints for the UI
+## Boundaries
+- Exposes REST API to gateway/UI
+- Abstracts persistence behind repository interfaces
+- NoSQL is an implementation detail (later)
 
-## Internal structure (suggested)
-- `app/api` – routes + dependencies
-- `app/services` – aggregation logic
-- `app/repositories` – storage abstraction (SQLite first)
-- `app/core` – config + logging
+## Target structure
+- API layer calls Core services
+- Core defines interfaces and domain rules
+- Infrastructure provides MongoDB (later)

@@ -1,15 +1,11 @@
 # Contributing
 
 ## Requirements
-- Python 3.11+ recommended
-- venv
+- .NET SDK 8.x recommended
 
 ## Setup
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
+dotnet restore
 ```
 
 ## Development
