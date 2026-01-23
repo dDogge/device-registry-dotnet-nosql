@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DeviceRegistry.Api\DeviceRegistry.Api.csproj" />
+  </ItemGroup>
+
 </Project>

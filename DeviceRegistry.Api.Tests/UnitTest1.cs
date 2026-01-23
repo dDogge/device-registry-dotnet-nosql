@@ -1,4 +1,4 @@
-namespace DeviceRegistry.Tests;
+namespace DeviceRegistry.Api.Tests;
 
 public class UnitTest1
 {
