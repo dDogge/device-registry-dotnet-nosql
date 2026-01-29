@@ -1,6 +1,6 @@
 namespace DeviceRegistry.Core.Devices;
 
-public sealed record Device(
+public sealed record DeviceDto(
     Guid Id,
     string DeviceId,
     string Model,
@@ -10,3 +10,8 @@ public sealed record Device(
     DateTimeOffset CreatedAt,
     DateTimeOffset UpdatedAt
 );
+
+public static class DeviceMappings {
+    public static DeviceDto ToDto(this Device d) =>
+        new(d.Id, d.DeviceId, d.Model, d.FirmwareVersion, d.Status, d.Metadata, d.CreatedAt, d.UpdatedAt);
+}
